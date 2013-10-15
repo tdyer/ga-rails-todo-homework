@@ -1,3 +1,5 @@
 <div>Task: <%= @task.description %></div>
 <div>Flagged? <%= @task.flag %></div>
 <div>Due Date: <%= @task.due %></div>
+
+<%= link_to 'Delete Task', @task, method: :delete, data: { confirm: "Are you sure?"}%>
