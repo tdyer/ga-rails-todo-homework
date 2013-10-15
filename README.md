@@ -24,10 +24,10 @@ Create a model for Todo tasks. And create a seed file that will create a few of 
     
 
 ### Create CRUD actions, (index, show, new, create, edit, update and delete).
-To manage these Todo tasks. This will involve creating a controller and route/s for these tasks.
+To manage these Todo tasks. This will involve creating a route, controller and views for these tasks.
 	
 ### Extra Credit
-- Reuse the view code that shows a form for the new and edit action using a view partials.
+- Reuse the view code that shows a form for the new and edit action using a view partial.
 
 - Mark a task as complete.	
     
