@@ -1,6 +1,11 @@
 <% @tasks.each do |task| %>
   <div><%= link_to task.description, task %></div>
-  <div><%= link_to "Edit Task", edit_task_path(task) %></div>
+  <div>
+       <%= form_for(task) do |f| %>
+       <%= f.label "Finished?" %><%= f.check_box :finished %>
+       <%= f.submit %>
+       <% end %>
+  </div>
 <% end %>
 <div><%= link_to "New Task", new_task_path %></div>
 

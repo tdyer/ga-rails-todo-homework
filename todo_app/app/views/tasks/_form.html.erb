@@ -2,4 +2,6 @@
 <%= f.label "Description:"%><%= f.text_field :description %>
 <%= f.label "Flagged?" %><%= f.check_box :flag %>
 <%= f.label "Due Date:" %><%= f.date_field :due %>
+<%= f.label "Finished?" %> <%= f.check_box :finished %>
 <%= f.submit %>
+<% end %>
