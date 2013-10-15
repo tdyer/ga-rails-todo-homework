@@ -1,0 +1,12 @@
+<div>Task: <%= @task.description %></div>
+<div>Flagged? <%= @task.flag %></div>
+<div>Due Date: <%= @task.due %></div>
+
+<div>  <%= form_for(@task) do |f| %>
+       <%= f.label "Finished?" %><%= f.check_box :finished %>
+       <%= f.submit %>
+       <% end %>
+</div>
+
+<%= link_to "Edit Task", edit_task_path(@task) %>
+<%= link_to 'Delete Task', @task, method: :delete, data: { confirm: "Are you sure?"}%>
