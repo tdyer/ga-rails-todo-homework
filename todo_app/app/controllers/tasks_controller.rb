@@ -12,6 +12,12 @@ class TasksController < ApplicationController
 	end
 
 	def create
+	    @task = Task.new(task_params)
+	    if @task.save
+	    	redirect_to tasks_path
+	    else
+	        render action: 'new' 
+	    end
 	end
 
 	def edit
