@@ -1,3 +1,3 @@
 TodoApp::Application.routes.draw do
-  resources :spiders
+  resources :tasks
 end

@@ -1,8 +1,15 @@
 <h3>Tasks</h3>
 <% @tasks.each do |task| %>
 <div class="tasks">
-	<%= task.name %>
-	<%= task.complete %>
-	<%= taks.due_date %>
+	<p><%= task.name %></p>
+	<% if task.complete == true%>
+		<font color="green"><p>Done!</p></font>
+	<% else %>
+		<font color="red"><p>DO THIS!</p></font>
+	<% end %>
+	<p><%= task.due_date %></p>
+	<%= link_to "edit task", edit_task_path(task) %>
+	<%= link_to "destroy task", task, method: :delete, data: {confirm: "Delete task? Are you sure that's productive?"} %>
+	</br>
 <% end %>
 </div>

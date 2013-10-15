@@ -1,4 +1,4 @@
-class TasksController < Application TasksController
+class TasksController < ApplicationController
 	before_action :set_task, only: [:show, :edit, :update, :destroy]
 
 	def show
@@ -15,12 +15,20 @@ class TasksController < Application TasksController
 	end
 
 	def edit
+
 	end
 
 	def update
+		if @task.update(task_params)
+			redirect_to tasks_path
+		else
+			render actions: 'edit'
+		end
 	end
 
 	def destroy
+		Task.find(params[:id]).delete
+		redirect_to tasks_path
 	end
 
 	private

@@ -1,0 +1,9 @@
+<div class="task">
+	<p><%= @task.name %></p>
+	<% if @task.complete == true%>
+		<font color="green"><p>Done!</p></font>
+	<% else %>
+		<font color="red"><p>DO THIS!</p></font>
+	<% end %>
+	<p><%= @task.due_date %></p>
+</div>
