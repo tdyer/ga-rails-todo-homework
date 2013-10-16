@@ -1,33 +1,12 @@
-
-
-
-
-
-
-
-
-
-
-id: integer
-  task: string
-  due_date: datetime
-  created_at: datetime
-  owner: string
-  complete: boolean
-  notes: text
-  catagory: string
-  days_to_complete: integer
-
-
-
-  <div class="spider">
-	<div><%=@spider.name %></div>
-	<div><%=@spider.poisonous %></div>
-	<div><%=@spider.color %></div>
-	<div><%=@spider.weight %></div>
-	<div><%=@spider.terror %></div>
-	<div><%=@spider.habitat %></div>
-	<div><%=@spider.origin %></div>
-	<div><%=@spider.image_url %></div>
-	<div><%= image_tag @spider.image_url %></div>
+<div class = "forms">
+	<div><%=f.label :task %> <%=f.text_field :task %></div>
+	<div><%=f.label :due_date %> <%=f.text_field :due_date %></div>
+	<div><%=f.label :created_at %> <%=f.text_field :owner%></div>
+	<div><%=f.label :complete %> <%=f.check_box :complete %></div>
+	<div><%=f.label :owner %> <%=f.text_field :owner %></div>
+	<div><%=f.label :notes %> <%=f.text_field :notes %></div>
+	<div><%=f.label :catagory %> <%=f.text_field :catagory %></div>
 </div>
+
+
+
