@@ -1,0 +1,13 @@
+<div class="task">
+  <% @tasks.each do |task| %>
+    <p><%= link_to task.description, task %></p>
+    <%= link_to "edit", edit_task_path(task) %>
+    <%= link_to "destroy", task, method: :delete,
+                data: { confirm: "Are you sure?" } %>
+    <div>Due by: <%= task.due_date %></div>
+    <div>Done?: <%= task.complete? %></div>
+  <% end %>
+</div>
+
+<br />
+<%= link_to "Add task", new_task_path %>
