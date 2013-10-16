@@ -1,12 +1,8 @@
-<div class = "forms">
-	<div><%=f.label :task %> <%=f.text_field :task %></div>
-	<div><%=f.label :due_date %> <%=f.text_field :due_date %></div>
-	<div><%=f.label :created_at %> <%=f.text_field :owner%></div>
-	<div><%=f.label :complete %> <%=f.check_box :complete %></div>
-	<div><%=f.label :owner %> <%=f.text_field :owner %></div>
-	<div><%=f.label :notes %> <%=f.text_field :notes %></div>
-	<div><%=f.label :catagory %> <%=f.text_field :catagory %></div>
-</div>
+<h1>Task Details</h1>
 
-
-
+<div><%=@list.task %></div>
+<div><%=@list.due_date %></div>
+<div><%=@list.created_at %></div>
+<div><%=@list.complete %></div>
+<div><%=@list.notes %></div>
+<div><%=@list.catagory %></div>

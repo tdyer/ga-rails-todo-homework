@@ -25,7 +25,7 @@ class ListsController < ApplicationController
 	end 
 
 	def update 
-		if @spider.update(list_params)
+		if @list.update(list_params)
 			redirect_to @list
 		else 
 			render action: 'edit'
