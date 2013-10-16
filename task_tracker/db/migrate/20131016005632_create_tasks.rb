@@ -4,6 +4,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :description
       t.boolean :complete
       t.string :due_date
+      t.timestamps
     end
   end
 end

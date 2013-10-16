@@ -1,0 +1,12 @@
+<h1>All Tasks</h1>
+
+  <% @tasks.each do |task| %>
+    <h3><%= link_to task.description, task %></h3>
+    <h4>Complete: <%= task.description %></h4>
+    <h4>Due Date: <%= task.due_date %></h4>
+    <h4>Created at: <%= task.created_at %></h4>
+    <%= link_to "Edit Task", edit_task_path(dream) %>
+    <%= link_to "Destroy Task", task, method: :delete, data: { confirm: 'Are You Certain?' } %>
+  <% end %>
+
+<%= link_to "New Task", new_task_path %>
