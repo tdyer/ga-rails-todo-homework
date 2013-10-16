@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Todo.create(task: 'remember laptop charger', description: 'dont leave your goddamn laptop charger at the CIC. pick it up and bring it home', complete: true, due_date: '10-17-2013' )
