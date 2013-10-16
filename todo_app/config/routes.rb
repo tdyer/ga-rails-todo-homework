@@ -1,5 +1,4 @@
 TodoApp::Application.routes.draw do
-  ToDo::Application.routes.draw do
-  resources :todos
+  resources :to_dos
 end
   

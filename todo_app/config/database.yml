@@ -1,13 +1,13 @@
 
 development:
-  hostname: localhost
+  host: localhost
   adapter: postgresql
   encoding: unicode
   database: todo_app_development
   pool: 5
 
 production:
-  hostname: localhost
+  host: localhost
   adapter: postgresql
   encoding: unicode
   database: todo_app_production

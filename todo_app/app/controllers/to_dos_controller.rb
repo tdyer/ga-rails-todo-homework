@@ -5,17 +5,17 @@ class ToDosController < ApplicationController
         end
 
         def index
-                @todos = ToDo.all
+                @to_dos = ToDo.all
         end
 
         def new
-                @todo = ToDo.new
+                @to_do = ToDo.new
         end
 
         def create
-                @todo = ToDo.new(todo_params)
-                if @todo.save
-                        redirect_to @todo
+                @to_do = ToDo.new(to_do_params)
+                if @to_do.save
+                        redirect_to @to_do
                 else
                         render action: 'new'
                 end
@@ -25,26 +25,26 @@ class ToDosController < ApplicationController
         end
 
         def update
-                if @todo.update(todo_params)
-                        redirect_to @todo
+                if @to_do.update(to_do_params)
+                        redirect_to @to_do
                 else
                         render action: 'edit'
                 end
         end
 
         def destroy
-                @todo.destroy
-                redirect_to todos_url
+                @to_do.destroy
+                redirect_to to_dos_url
         end
 
         private
 
         def set_todo
-                @todo = ToDo.find(params[:id])
+                @to_do = ToDo.find(params[:id])
         end
 
-        def todo_params
-                params.require(:todo).permit(:task_name, :description, :complete, :due_date) 
+        def to_do_params
+                params.require(:to_do).permit(:task_name, :description, :complete, :due_date) 
         end
 
 end
