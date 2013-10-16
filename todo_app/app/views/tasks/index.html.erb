@@ -1,0 +1,10 @@
+<h1>To-Do List</h1>
+<div class="task">
+<% @tasks.each do |task| %>
+	<div class="index-link"><%= link_to task.description, task %></div>
+	<div class="index-buttons"><%= link_to 'edit task', edit_task_path(task) %>
+	<%= link_to 'delete task', task, method: :delete, data: {confirm: "Delete this task?"} %></div>
+<% end %>
+</div>
+<div>
+<%= link_to 'New Task', new_task_path %></div>
