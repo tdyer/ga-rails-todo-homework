@@ -7,9 +7,13 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @item = Item.new
   end
 
   def create
+    @item= Item.new(item_params)
+    if @item.save
+      redirect_to items_url
   end
 
   def edit
