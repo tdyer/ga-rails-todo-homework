@@ -1,7 +1,11 @@
 <div class="task">
   <% @tasks.each do |task| %>
     <p><%= link_to task.description, task %></p>
+    <%= link_to "edit", edit_task_path(task) %>
     <div>Due by: <%= task.due_date %></div>
     <div>Done?: <%= task.complete? %></div>
   <% end %>
 </div>
+
+<br />
+<%= link_to "Add task", new_task_path %>
