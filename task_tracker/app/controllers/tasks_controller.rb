@@ -1,4 +1,4 @@
-class TaskssController < ApplicationController
+class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :delete]
 
   def show
