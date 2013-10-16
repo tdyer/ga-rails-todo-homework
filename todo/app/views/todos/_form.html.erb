@@ -1,0 +1,9 @@
+<div class="new_todo">
+	<div><%= form_for(@todo) do |f| %></div>
+		<div><%= f.label :task %><%= f.text_field :task %></div>
+		<div><%= f.label :complete %><%= f.check_box :complete %></div>
+		<div><%= f.label :due_date %><%= f.text_field :due_date %></div>
+		<div><%= f.label :description %><%= f.text_area :description %></div>
+		<div> <%= f.submit %> </div>
+	<% end %>
+</div>

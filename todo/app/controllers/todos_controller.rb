@@ -4,6 +4,7 @@ class TodosController < ApplicationController
 	def index
 	end
 	def create
+		@todo = Todo.new
 	end
 	def new
 	end
