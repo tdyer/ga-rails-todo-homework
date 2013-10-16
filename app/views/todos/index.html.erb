@@ -1,0 +1,39 @@
+<h1>Tasks</h1>
+
+<div class="tasks">
+
+
+	<h3>To Do</h3>
+	<% @todos.each do |todo| %>
+		<% if todo.flag == false %>
+			<div class="to-do">
+				<div class="left">
+					<%= todo.name %> | <%= todo.deadline %>
+				</div>
+				<div class="right">
+				<%= link_to "done", complete_todo_path(todo) %> | <%= link_to "delete", todo, method: :delete, data: { confirm: "Delete this task?"} %>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+
+	<h3>Add a task:</h3>
+<%= form_for(@todo) do |f| %>
+	<div class="field">
+		Task:<%= f.text_field :name %> Deadline:<%= f.date_select :deadline %>
+		<%= f.submit %>
+	</div>
+<% end %>
+
+		<h3>Completed</h3>
+	<% @todos.each do |todo| %>
+		<% if todo.flag == true %>
+			<div class="completed">
+				<div class="left">
+					<strike><%= todo.name %> | <%= todo.deadline %></strike>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+
+</div>
