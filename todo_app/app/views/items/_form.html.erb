@@ -1,0 +1,21 @@
+<%= form_for(@item) do |f| %>
+<div class="field">
+<%= f.label :title %><%= f.text_field :title %>
+</div>
+
+<div class="field">
+<%= f.label :description%><%= f.text_field :description %>
+</div>
+
+<div class="field">
+<%= f.label :important%><%= f.check_box :important %>
+</div>
+
+<div class="field">
+<%= f.label :urgent%><%= f.check_box :urgent %>
+</div>
+
+<div class="actions">
+<%= f.submit %>
+</div>
+<% end %>

@@ -1,0 +1,22 @@
+
+development:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+
+
+test:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: todo_app_test
+  pool: 5
+
+
+production:
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: todo_app_production
+  pool: 5
+ 
