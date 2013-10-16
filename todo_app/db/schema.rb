@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20131016012433) do
 
   create_table "tasks", force: true do |t|
     t.text    "description"
-    t.boolean "complete?"
+    t.boolean "complete?", default: false
     t.date    "due_date"
   end
 
