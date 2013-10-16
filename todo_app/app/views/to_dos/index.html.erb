@@ -1,0 +1,12 @@
+<h1>All To Do's</h1>
+<div class="todos">
+        <% @to_dos.each do |todo| %>
+                <h3><%= link_to todo.task_name, todo %></h3>
+                <%= link_to "edit to_do", edit_to_do_path(todo) %>
+                <%= link_to "destroy to_do", todo, method: :delete, data: { confirm: "Are you really done?"} %>
+                <div>Completion Status: <%= todo.complete %></div>
+        <% end %>
+</div>
+
+<br />
+<%= link_to "New To Do", new_to_do_path %>
