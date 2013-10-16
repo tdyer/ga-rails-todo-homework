@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
     before_action :set_item, only: [:show, :edit, :update, :destroy]
   def index
+    @items = Item.all
   end
 
   def show
@@ -11,18 +12,28 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item= Item.new(item_params)
+    @item = Item.new(item_params)
     if @item.save
       redirect_to items_url
+    else
+      render action: 'new'
+    end
   end
 
   def edit
   end
 
   def update
+    if @item.update(item_params)
+      redirect_to @item
+    else
+      render action: 'edit'
+    end
   end
 
   def destroy
+    @spider.destroy
+    redirect_to items_url
   end
 
 end

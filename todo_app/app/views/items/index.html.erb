@@ -1,2 +1,13 @@
 <h1>Toddo</h1>
+
+<% @items.each do |item| %>
+
+  <h3><%= link_to item.title, item%></h3>
+  <div>Urgent? <%= item.urgent %></div>
+<div>Important? <%= item.important %></div>
+  <%= link_to "edit item", edit_item_path(item) %>
+  <%= link_to "destroy item", item, method: :delete, data: {confirm: "have you really completed this loser?"} %>
+
+<% end %>
+
 <%= link_to "New Item", new_item_path %>
