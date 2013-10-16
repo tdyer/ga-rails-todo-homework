@@ -1,0 +1,24 @@
+<h1>Bottomless ToDo List</h1>
+
+<% @lists.each do |list| %> 
+<h3><%= link_to list.task, list %></h3>
+<h3>Complete?<%= list.complete %></h3>
+<div><h2>Due on<%=list.due_date%></h2></div>
+<%end%> 
+
+
+<!-- 
+<!-- 
+
+
+id: integer
+  task: string
+  due_date: datetime
+  created_at: datetime
+  owner: string
+  complete: boolean
+  notes: text
+  catagory: string
+  days_to_complete: integer
+
+ -->

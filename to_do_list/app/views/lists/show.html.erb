@@ -1,0 +1,33 @@
+
+
+
+
+
+
+
+
+
+
+id: integer
+  task: string
+  due_date: datetime
+  created_at: datetime
+  owner: string
+  complete: boolean
+  notes: text
+  catagory: string
+  days_to_complete: integer
+
+
+
+  <div class="spider">
+	<div><%=@spider.name %></div>
+	<div><%=@spider.poisonous %></div>
+	<div><%=@spider.color %></div>
+	<div><%=@spider.weight %></div>
+	<div><%=@spider.terror %></div>
+	<div><%=@spider.habitat %></div>
+	<div><%=@spider.origin %></div>
+	<div><%=@spider.image_url %></div>
+	<div><%= image_tag @spider.image_url %></div>
+</div>

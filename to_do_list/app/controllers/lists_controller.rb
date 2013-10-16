@@ -43,7 +43,7 @@ class ListsController < ApplicationController
 	end 
 
 	def list_params
-		params.require(:list).permit(:task:, 
+		params.require(:list).permit(:task, 
 			:due_date, :created_at, :owner, :complete, :notes, :catagory, :days_to_complete)
 	end 
 
