@@ -11,8 +11,9 @@
 	<%= link_to "edit task", edit_task_path(task) %>
 	<%= link_to "destroy task", task, method: :delete, data: {confirm: "Delete task? Are you sure that's productive?"} %>
 	</br>
-<% end %>
 </div>
+<% end %>
+
 <div class="create-task">
 	<%= link_to "New Task", new_task_path %>
 </div>
