@@ -1,0 +1,16 @@
+body {
+	font-family: 'Alef', sans-serif;
+	text-align: center;
+}
+
+.task {
+	margin-bottom: 20px;
+}
+
+.index-link {
+	margin-bottom: 10px;
+}
+
+.index-buttons {
+	margin-bottom: 30px;
+}
