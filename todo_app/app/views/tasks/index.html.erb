@@ -1,0 +1,20 @@
+<h3>Tasks</h3>
+<% @tasks.each do |task| %>
+<div class="task-container">
+	<p class="task-name"><%= task.name %></p>
+	<% if task.complete == true%>
+		<font color="green"><p class="status">Done!</p></font>
+	<% else %>
+		<font color="red"><p class="status">DO THIS!</p></font>
+	<% end %>
+	<p class="due-date"><%= task.due_date %></p>
+	<%= link_to "edit task", edit_task_path(task) %>
+	<%= link_to "destroy task", task, method: :delete, data: {confirm: "Delete task? Are you sure that's productive?"} %>
+	</br>
+</div>
+<% end %>
+
+<div class="create-task">
+	<%= link_to "New Task", new_task_path %>
+</div>
+
