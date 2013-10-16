@@ -28,13 +28,13 @@ class TasksController < ApplicationController
     if @task.update(task_params)
       redirect_to @task
     else
-      render action: edit
+      render action: 'edit'
     end
   end
 
   def destroy
     @task.destroy
-    redirect_to task_url
+    redirect_to tasks_url
   end
 
   private
