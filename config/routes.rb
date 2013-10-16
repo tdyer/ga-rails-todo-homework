@@ -2,7 +2,7 @@ ToDoList::Application.routes.draw do
   root 'todos#index'
   resources :todos do
     member do
-      get 'complete'
+      put 'complete'
     end
   end
 

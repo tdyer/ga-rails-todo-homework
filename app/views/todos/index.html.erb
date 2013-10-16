@@ -11,7 +11,7 @@
 					<%= todo.name %> | <%= todo.deadline %>
 				</div>
 				<div class="right">
-				<%= link_to "done", complete_todo_path(todo) %> | <%= link_to "delete", todo, method: :delete, data: { confirm: "Delete this task?"} %>
+				<%= link_to "done", complete_todo_path(todo), method: :put %> | <%= link_to "delete", todo, method: :delete, data: { confirm: "Delete this task?"} %>
 				</div>
 			</div>
 		<% end %>
