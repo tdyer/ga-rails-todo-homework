@@ -1,3 +1,3 @@
-Todo.create(name: "The Joyous Dream", description: "Joyous", scary:false, fun:true)
-Todo.create(name: "The Angry Dream", description: "Angry", scary:true, fun:false)
-Todo.create(name: "The Evil Dream", description: "Evil", scary:true, fun:false)
+Todo.create(description: "Take out trash", complete:false, date_due: "October 20, 2013")
+Todo.create(description: "Clean dishes", complete:true, date_due: "October 19, 2013")
+Todo.create(description: "Walk Dog", complete:true, date_due: "October 18, 2013")
