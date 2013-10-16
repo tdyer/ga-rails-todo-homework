@@ -1,5 +1,5 @@
 <div class="todos">
-<% @dreams.each do |todo| %>
+<% @todos.each do |todo| %>
 	<h3> <%= todo.task%> </h3>
 	<%= todo.complete %>
 	<%= link_to todo.task, todo %>
